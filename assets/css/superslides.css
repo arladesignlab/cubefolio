@@ -40,15 +40,14 @@
 .slides-pagination {
   position: absolute;
   z-index: 3;
-  bottom: 0;
-  text-align: center;
-  width: 100%;
+  top: 50px;
+  right: 15px
 }
 .slides-pagination a {
-  border: 2px solid #222;
+  border: 2px solid #fff;
   border-radius: 15px;
-  width: 10px;
-  height: 10px;
+  width: 16px;
+  height: 16px;
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -61,5 +60,5 @@
   text-indent: -100%;
 }
 .slides-pagination a.current {
-  background: #222;
+  background: #fff;
 }

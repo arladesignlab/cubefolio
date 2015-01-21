@@ -9,7 +9,7 @@ vendor-prefixes = webkit moz o ms official
 // Color Variables
 black = #000000
 blue = #08274b
-gold = #e8a11c
+grisOscuro = #272822
 darkerGold = #c88a16
 gray = #908f8f
 white = #ffffff
@@ -61,4 +61,44 @@ white = #ffffff
 			color white
 			background rgba(black, .6)
 			
-					
+.FeaturedNode
+	padding-bottom 3em
+	.FeaturedNode-scrollButton
+		cursor pointer
+		position relative
+		top -30px
+		border-radius 25px 25px 0 0
+		background white
+		height 30px
+		margin 0 auto
+		width 50px
+		text-align center
+		z-index 10
+		
+	.FeaturedNode-imageContainer
+		max-width 300px
+		max-height 195px
+		overflow hidden
+		position relative
+		
+		.FeaturedNode-image
+			width 100%
+		.FeaturedNode-description
+			font-size 18px
+			font-weight bold
+			padding 2px 0
+			margin 0
+			position absolute
+			width 100%
+			background rgba(white, 0.8)
+			text-align center
+			text-transform uppercase
+			top 85px
+
+.Footer
+	margin 0
+	padding 2em 0 1em 0 
+	background grisOscuro
+	text-align center
+	color white
+		
