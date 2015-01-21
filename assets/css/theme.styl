@@ -1,5 +1,6 @@
 // Imported Stylesheets
 @import 'bootstrap.min.css'
+@import 'superslides.css'
 @import 'customize.styl'
 @import 'nib/vendor'
 
@@ -23,3 +24,41 @@ white = #ffffff
 
 
 // Theme Styles
+.Header-top
+	position absolute
+	top 0
+	width 100%
+	z-index 100
+.Header
+	background black
+	box-shadow 0 0 8px black
+	.MainMenu
+		width 100%
+		.MainMenu-list
+			text-decoration none
+			list-style none
+			.MainMenu-item
+				display inline-block
+				margin-left 10px
+				padding-top .4em
+				a
+					color white
+					
+.SliderNode
+	margin 0
+	padding 0
+	.SliderNode-container
+		float right
+		position relative
+		width 50%
+		height 100%
+		
+		.SliderNode-info
+			padding 0 1em
+			position absolute
+			bottom 50px
+			width 80%
+			color white
+			background rgba(black, .6)
+			
+					
