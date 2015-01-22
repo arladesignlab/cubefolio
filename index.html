@@ -15,8 +15,17 @@
       </div>
       <div class="col-xs-9">
         <nav class="MainMenu">
+          <a href="#" class="MainMenu-mobileMenu">Menu</a>
           <ul class="MainMenu-list">
-              <li class="MainMenu-item"><a href="#">Opcion1</a></li>
+              <li class="MainMenu-item">
+                <a href="#">Opcion1</a>
+                <ul class="MainMenu-subMenu">
+                  <li><a href="#">Submenu 1</a></li>
+                  <li><a href="#">Submenu 2</a></li>
+                  <li><a href="#">Submenu 3</a></li>
+                  <li><a href="#">Submenu 4</a></li>
+                </ul>
+              </li>
               <li class="MainMenu-item"><a href="#">Opcion2</a></li>
               <li class="MainMenu-item"><a href="#">Opcion3</a></li>
               <li class="MainMenu-item"><a href="#">Opcion4</a></li>
@@ -49,42 +58,60 @@
           </div>
         </div>
       </li>
-      <li><img src="assets/images/cinelli-front.jpeg" width="1024" height="683" alt="Cinelli"></li>
-      <li><img src="assets/images/affinity.jpeg" width="1024" height="685" alt="Affinity"></li>
+      <li>
+        <img src="assets/images/cinelli-front.jpeg" width="1024" height="683" alt="Cinelli">
+        <div class="SliderNode-container">
+          <div class="SliderNode-info">
+            <h1>Lorem Ipsum</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, rerum sunt dolorem expedita aspernatur libero repellendus placeat eos eveniet corporis cum deserunt ad adipisci. Ducimus perspiciatis eum eligendi ut velit?</p>
+            <a href="#">Ir al articulo</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <img src="assets/images/affinity.jpeg" width="1024" height="685" alt="Affinity">
+        <div class="SliderNode-container">
+          <div class="SliderNode-info">
+            <h1>Lorem Ipsum</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum possimus alias ipsa, asperiores hic officiis natus magni labore. Sint exercitationem quo recusandae facilis hic nesciunt odio ad debitis quisquam similique.</p>
+            <a href="#">Ir al articulo</a>
+          </div>
+        </div>
+      </li>
     </ul>
 
     <nav class="slides-navigation">
-      <a href="#" class="next">Next</a>
-      <a href="#" class="prev">Previous</a>
+      <a href="#" class="next glyphicon glyphicon-chevron-right"></a>
+      <a href="#" class="prev glyphicon glyphicon-chevron-left"></a>
     </nav>
   </div>
   </section>
   <div class="container-fluid">
     <div class="FeaturedNode row">
       <div class="FeaturedNode-scrollButton">
-        <a href="#">*</a>
+        <a href="#" class="glyphicon glyphicon-chevron-up"></a>
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-6 col-md-3">
         <figure class="FeaturedNode-imageContainer">
           <img src="assets/images/affinity.jpeg" alt="" class="FeaturedNode-image">
           <p class="FeaturedNode-description">Lorem Ipsum</p>
         </figure>
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-6 col-md-3">
         <figure class="FeaturedNode-imageContainer">
           <img src="assets/images/cinelli-front.jpeg" alt="" class="FeaturedNode-image">
           <p class="FeaturedNode-description">Lorem Ipsum</p>
         </figure>
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-6 col-md-3">
         <figure class="FeaturedNode-imageContainer">
-          <img src="#" alt="" class="FeaturedNode-image">
+          <img src="assets/images/surly.jpeg" alt="" class="FeaturedNode-image">
           <p class="FeaturedNode-description">Lorem Ipsum</p>
         </figure>
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-6 col-md-3">
         <figure class="FeaturedNode-imageContainer">
-          <img src="#" alt="" class="FeaturedNode-image">
+          <img src="assets/images/people.jpeg" alt="" class="FeaturedNode-image">
           <p class="FeaturedNode-description">Lorem Ipsum</p>
         </figure>
       </div>
@@ -112,12 +139,27 @@
 
       $('#slides').on('mouseenter', function() {
         $(this).superslides('stop');
-        console.log('Stopped')
       });
       $('#slides').on('mouseleave', function() {
         $(this).superslides('start');
-        console.log('Started')
       });
+      function featuredImages(){ 
+        var containers = $('.FeaturedNode-imageContainer');
+          for (var i = 0; i < containers.length; i++) {
+            var altoContainer = $(containers[i]).height();
+            var altoImg = $(containers[i]).children('img').height();
+            if (altoImg<altoContainer) {
+                console.log("la imagen "+i+" es mas chica que el container")
+                var scala= altoContainer/altoImg;
+                var margen= (altoContainer-altoImg)/2;
+                console.log("se tiene que escalar "+scala+" y el margen de "+margen);
+                $(containers[i]).children('.FeaturedNode-image').css("transform","scale("+scala+")");
+                $(containers[i]).children('.FeaturedNode-image').css("margin",margen);
+                
+            };        
+          };
+        };
+      featuredImages();
     });
 </script>
 </html>
