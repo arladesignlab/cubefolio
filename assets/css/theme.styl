@@ -1,5 +1,6 @@
 // Imported Stylesheets
 @import 'bootstrap.min.css'
+@import 'elastislide.css'
 @import 'superslides.css'
 @import 'customize.styl'
 @import 'nib/vendor'
@@ -39,7 +40,8 @@ white = #ffffff
 		.MainMenu-item
 			display inline-block
 			line-height 40px
-			transition all 0.2s
+			z-index 2
+			
 			a
 				line-height 5px
 				color rgba(white, 0.65)
@@ -47,23 +49,23 @@ white = #ffffff
 				text-decoration none
 				width 100%
 				padding 15px 50px
-				transition all 0.1s
 				&:hover
 					color white
-			&:hover > .MainMenu-subMenu
-				display block
+
 			.MainMenu-subMenu
+				z-index -2
+				top 0
 				display none
 				padding 0
+				padding-top 40px
 				position absolute
-				background grisOscuro
 				text-align center
-				border-radius 0 0 .4em .4em
-				transition all 0.2s
 				li
 					border-bottom 1px solid rgba(white, 0.1)
+					background grisOscuro
 					&:last-child
 						border-bottom none
+						border-radius 0 0 .4em .4em
 	.MainMenu-mobileMenu
 		color white
 		font-size 18px
@@ -178,6 +180,10 @@ white = #ffffff
 		.SliderNode-container
 			width 80%
 
+@media (min-width: 769px)
+	.Header
+		.MainMenu-list
+			display block !important
 	
 @media (max-width: 768px)
 	.Header
@@ -195,17 +201,27 @@ white = #ffffff
 			right 0
 			.MainMenu-item
 				width 100%
+				border-bottom 1px solid rgba(white, 0.1)
 				text-align center
+				z-index auto
+				overflow hidden
 				a
 					border-bottom 1px solid rgba(white, 0.1)
+					&:last-child
+						border none
 				&:hover > .MainMenu-subMenu
 					display none
 				.MainMenu-subMenu
 					background black
+					padding 0
+					z-index auto
 					position relative
+					li
+						background none
 					a
 						font-size 12px
 						border-bottom none
+						
 	.FeaturedNode
 		.FeaturedNode-imageContainer
 			max-width 100%
