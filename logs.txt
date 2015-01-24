@@ -1,0 +1,41 @@
+commit 936c2cf09508a7ed1f9bd06bb3d6ebca2737662f
+Author: Diego Ponce <diegoponceg@hotmail.com>
+Date:   Fri Jan 23 11:35:34 2015 -0600
+
+    Agrgado Product-tittle a Collection
+
+commit 83450e89ca763b0b9afe0794bde21f6bae758d85
+Author: Diego Ponce <diegoponceg@hotmail.com>
+Date:   Fri Jan 23 07:46:07 2015 -0600
+
+    Corregido MainMenu y creado el carousel
+
+commit 0b7adf4f76b109073c0e82fa3009d088c863bad0
+Author: Diego Ponce <diegoponceg@hotmail.com>
+Date:   Thu Jan 22 00:17:16 2015 -0600
+
+    codeado el Menu, agregado el submenu desplegable y el boton en responsive
+
+commit 0ff0d9233815d30b2d17b6cc75973db3184eb801
+Author: Diego Ponce <diegoponceg@hotmail.com>
+Date:   Wed Jan 21 18:57:37 2015 -0600
+
+    Actualizada home con el tamaño del FeaturedNode-imageContainer arreglado
+
+commit b432d4df3909ccfc50822bb6a2cf22c9b53f53d4
+Author: Diego Ponce <diegoponceg@hotmail.com>
+Date:   Wed Jan 21 00:21:12 2015 -0600
+
+    Actualizado Slider y codeado FeaturedNode
+
+commit 8c53aef0561832ccb04e01ec040f9e5bf2832251
+Author: Diego Ponce <diegoponceg@hotmail.com>
+Date:   Tue Jan 20 18:03:00 2015 -0600
+
+    Slidershow codeado
+
+commit facfd6737b69e43497e77425b80d9dbb1da56306
+Author: Diego Ponce <diegoponceg@hotmail.com>
+Date:   Tue Jan 20 12:23:57 2015 -0600
+
+    Archivos base Agregados

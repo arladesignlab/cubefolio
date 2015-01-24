@@ -25,6 +25,12 @@ white = #ffffff
 
 
 // Theme Styles
+.NoMenu
+	position absolute
+	top 0
+	width 100%
+	height 100%
+	z-index -20
 .Header-top
 	position absolute
 	top 0
@@ -33,14 +39,16 @@ white = #ffffff
 .Header
 	background black
 	box-shadow 0 0 6px 4px rgba(black,0.7)
+	z-index 3
 	.MainMenu-list
 		text-decoration none
 		list-style none
 		margin 0
+		z-index 4
 		.MainMenu-item
 			display inline-block
 			line-height 40px
-			z-index 2
+			
 			
 			a
 				line-height 5px
@@ -51,13 +59,18 @@ white = #ffffff
 				padding 15px 50px
 				&:hover
 					color white
+			&:last-child
+				right 0
+				position absolute
+				a
+					padding 0 15px
+					border-left 1px solid white
 
 			.MainMenu-subMenu
-				z-index -2
-				top 0
+				z-index 4
+				top 40px
 				display none
 				padding 0
-				padding-top 40px
 				position absolute
 				text-align center
 				li
@@ -164,6 +177,75 @@ white = #ffffff
 	padding 2em 0 1em 0 
 	text-align center
 
+/* Styles for Collection */
+.Product
+	position relative
+	border-bottom 1px solid rgba(black,0.4)
+	.Product-tittle
+		padding 0
+		position absolute
+		top 50%
+		transform translateY(-50%)
+		.Product-name
+			text-decoration none
+			text-transform uppercase
+			font-size 18px
+			text-align center
+			margin 0
+	.CaurouselContainer
+		float right
+		.elastislide-horizontal
+			padding 15px 80px 15px 15px
+		.elastislide-wrapper 
+			background none
+			box-shadow none
+			nav
+				span
+					background none
+					border none
+					border-radius none
+					text-indent initial
+					color black
+					font-size 25px
+				.elastislide-prev
+					left initial
+					right 35px
+				.elastislide-prev:before
+					content "\e079"
+					font-family 'Glyphicons Halflings'
+				.elastislide-next:before
+					content "\e080"
+					font-family 'Glyphicons Halflings'
+/*Styles for Products*/
+.SecondMenu
+	position relative
+	z-index 2
+	background #3498DB
+	line-height 100%
+	float left
+	width 100%
+	.SecondMenu-list
+		margin 0
+		padding 0
+		text-align center
+		float left
+		width 100%
+		
+		.SecondMenu-item
+			width 20%
+			display inline-block
+			a
+				line-height 30px
+				float left
+				width 100%
+				text-decoration none
+				text-align center
+				color white
+.sec
+	figure
+		max-width 100%
+		img
+			width 100%
 @media (max-width: 992px)
 	.Header
 		.MainMenu-list
@@ -205,6 +287,12 @@ white = #ffffff
 				text-align center
 				z-index auto
 				overflow hidden
+				&:last-child
+					right none
+					position static
+					a
+						padding 15px 50px
+						border-left none
 				a
 					border-bottom 1px solid rgba(white, 0.1)
 					&:last-child
@@ -231,19 +319,13 @@ white = #ffffff
 	.SliderNode
 		.SliderNode-container
 			width 100%
-/* Styles for Collection */
-.Product
-	position relative
-	.Product-tittle
-		padding 0
-		position absolute
-		top 50%
-		transform translateY(-50%)
-		.Product-name
-			text-decoration none
-			text-transform uppercase
-			font-size 18px
-			text-align center
-			margin 0
-	.CaurouselContainer
-		float right
+	/*Style for Collection*/
+	.Product
+		position static
+		.Product-tittle
+			position static
+			transform none
+			margin-top 10px
+		.CaurouselContainer
+			float none
+

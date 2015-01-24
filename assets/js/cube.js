@@ -1,6 +1,9 @@
 $(function() {
   //Variables
   oneSubmenu=true;
+  $('.NoMenu').click(function(){
+    $('.MainMenu-subMenu').slideUp("fast");
+  });
   
   $('.MainMenu-mobileMenu').click(function(event){
     event.preventDefault();
