@@ -64,10 +64,10 @@
   </div>
   <nav class="SecondMenu">
 	<ul class="SecondMenu-list">
-		<li class="SecondMenu-item"><a href="#">Lorem Ipsum</a></li>
-		<li class="SecondMenu-item"><a href="#">Lorem Ipsum</a></li>
-		<li class="SecondMenu-item"><a href="#">Lorem Ipsum</a></li>
-		<li class="SecondMenu-item"><a href="#">Lorem Ipsum</a></li>
+		<li class="SecondMenu-item"><a class="smooth" href="#img1">Lorem Ipsum</a></li>
+		<li class="SecondMenu-item"><a class="smooth" href="#img2">Lorem Ipsum</a></li>
+		<li class="SecondMenu-item"><a class="smooth" href="#img3">Lorem Ipsum</a></li>
+		<li class="SecondMenu-item"><a class="smooth" href="#img4">Lorem Ipsum</a></li>
 	</ul>
   </nav>
   <section class="sec" id="img1">
@@ -82,9 +82,6 @@
   <section class="sec" id="img4">
   	<figure><img src="assets/img/image4.jpg" alt=""></figure>
   </section>
-	<figure class="ImageContainer">
-		<img src="#" alt="">
-	</figure>
    <footer class="Footer">
     <p class="Footer-copyRight">©<strong>2015</strong> Cube. Todos los derechos reservados.</p>
   </footer>
@@ -97,21 +94,34 @@
 	$(function(){
 		var topDelMenu = $('.SecondMenu').offset().top;
 
+		//evento de Menu estatico
+	    $(window).scroll(function(){
+	        //obtener posicion del scroll de la ventana
+	        var posicionScrollVentana = $(window).scrollTop();
+	         
+	        //posicion del menu
+	        if(posicionScrollVentana > topDelMenu){
+	            $('.SecondMenu').css({position: 'fixed', top: 0});
+	        } else {
+	            $('.SecondMenu').css({position: 'static'});
+	        }
+
+
+	    });//Menu Estatico
+
+	$('a.smooth[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+        });
+
 	});
-	//evento scroll de la ventana
-    $(window).scroll(function(){
-        //obtener posicion del scroll de la ventana
-        var posicionScrollVentana = $(window).scrollTop();
-         
-        //posicion del menu
-        if(posicionScrollVentana > topDelMenu){
-            $('.SecondMenu').css({position: 'fixed', top: 0});
-        } else {
-            $('.SecondMenu').css({position: 'static'});
-        }
-
-
-    });//termina scroll
-	
 </script>
 </html>
