@@ -41,9 +41,16 @@ white = #ffffff
 	box-shadow 0 0 6px 4px rgba(black,0.7)
 	z-index 3
 	.Header-logoContainer
-		max-width 150px
+		width 150px
+		position absolute
 		.Header-logo
 			width 100%
+	.line
+		width 100%
+		height 4px
+		position absolute
+		left 0
+		bottom 0
 	.MainMenu-list
 		text-decoration none
 		list-style none
@@ -97,6 +104,10 @@ white = #ffffff
 .SliderNode
 	margin 0
 	padding 0
+	.slides-pagination
+		a
+			border-radius 0
+			background #211915
 	.slides-navigation
 		.next
 		.prev
