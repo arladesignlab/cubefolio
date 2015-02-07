@@ -4,22 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="assets/css/theme.css">
-  <title>Home</title>
+  <title>Cube Desafiando Ideas</title>
 </head>
 <body>
  <div class="container-fluid Header-top">
   <header class="Header row">
-      <div class="col-xs-1">
+      <div class="col-xs-6 col-sm-2 noPadd">
         <figure class="Header-logoContainer">
-          <img class="Header-logo" src="assets/img/logocube.png" alt="">
+          <img class="Header-logo" src="assets/img/cube.png" alt="">
         </figure>
       </div>
-      <div class="col-xs-11">
+      <div class="col-xs-6 col-sm-10 noPadd">
         <nav class="MainMenu">
           <a href="#" class="MainMenu-mobileMenu">MENU</a>
           <ul class="MainMenu-list">
               <li class="MainMenu-item">
-                <a href="#">Opcion1</a>
+                <a href="#">Lo que hacemos</a>
                 <ul class="MainMenu-subMenu">
                   <li><a href="#">Submenu 1</a></li>
                   <li><a href="#">Submenu 2</a></li>
@@ -28,7 +28,7 @@
                 </ul>
               </li>
               <li class="MainMenu-item">
-                <a href="#">Opcion2</a>
+                <a href="#">nuestro alcance</a>
                 <ul class="MainMenu-subMenu">
                   <li><a href="#">Submenu 1</a></li>
                   <li><a href="#">Submenu 2</a></li>
@@ -37,7 +37,7 @@
                 </ul>
               </li>
               <li class="MainMenu-item">
-                <a href="#">Opcion3</a>
+                <a href="#">materiales y procesos</a>
                 <ul class="MainMenu-subMenu">
                   <li><a href="#">Submenu 1</a></li>
                   <li><a href="#">Submenu 2</a></li>
@@ -46,7 +46,7 @@
                 </ul>
               </li>
               <li class="MainMenu-item">
-                <a href="#">Opcion4</a>
+                <a href="#">clientes</a>
                 <ul class="MainMenu-subMenu">
                   <li><a href="#">Submenu 1</a></li>
                   <li><a href="#">Submenu 2</a></li>
@@ -55,13 +55,10 @@
                 </ul>
               </li>
               <li class="MainMenu-item">
-                <a href="#">Opcion5</a>
-                <ul class="MainMenu-subMenu">
-                  <li><a href="#">Submenu 1</a></li>
-                  <li><a href="#">Submenu 2</a></li>
-                  <li><a href="#">Submenu 3</a></li>
-                  <li><a href="#">Submenu 4</a></li>
-                </ul>
+                <a href="#">empresa</a>
+              </li>
+              <li class="MainMenu-item">
+                <a href="#">contacto</a>
               </li>       
           </ul>
         </nav>
@@ -152,9 +149,20 @@
         
     </div>
   </div>
-    
+   <div class="BarUp">
+     <a href="#" class="inicio">Inicio</a>
+     <a href="#" class="inicioUp glyphicon glyphicon-chevron-up"></a>
+   </div> 
   <footer class="Footer">
-    <p class="Footer-copyRight">©<strong>2015</strong> Cube. Todos los derechos reservados.</p>
+    <ul class="Footer-nav">
+      <li><a href="#">Lo que hacemos</a></li>
+      <li><a href="#">Nuestro Alcance</a></li>
+      <li><a href="#">Materiales y Procesos</a></li>
+      <li><a href="#">Clientes</a></li>
+      <li><a href="#">Empresa</a></li>
+    </ul>
+    <p class="Footer-copyright">© 2015 <strong>CUBE</strong> DESAFIANDO IDEAS</p>
+    
   </footer>
 </body>
 <script src="assets/js/jquery-2.1.3.min.js"></script>
@@ -166,7 +174,7 @@
 <script>
   $(function(){
     $('#slides').superslides({
-    hashchange: true,
+    hashchange: false,
     play: 8000
     });
     $('#slides').on('mouseenter', function() {
