@@ -69,22 +69,95 @@
   <div class="Tab">
     <div class="Tab-item">
       <p>materiales</p>
-      <div class="rect current"></div>
+      <a class="rect current" href="#1"></a>
     </div>
     <div class="Tab-item">
       <p>procesos</p>
-      <div class="rect"></div>
+      <a class="rect" href="#2"></a>
     </div>
   </div>
   <section class="Pages">
-    <div id="slides">
-    <div class="slides-container">
-      <img src="assets/images/people.jpeg" alt="Cinelli">
-      <img src="assets/images/surly.jpeg" width="1024" height="682" alt="Surly">
-      <img src="assets/images/cinelli-front.jpeg" width="1024" height="683" alt="Cinelli">
-      <img src="assets/images/affinity.jpeg" width="1024" height="685" alt="Affinity">
-    </div>
-  </div>
+    <figure class="Pages-materials">
+      <img src="assets/img/image4.jpg" alt="">
+      <img class="Pages-hover" src="assets/img/image3.jpg" alt="">
+      <div class="Page-materialsInfo">
+        <h3>Metal</h3>
+        <p>ver mas</p>
+        <div class="ulContainer">
+          <ul>
+            <li>Alambrón</li>
+            <li>Aluminio</li>
+            <li>Lámina</li>
+            <li>Tubulares</li>
+          </ul>
+        </div>
+      </div>
+    </figure>
+    <figure class="Pages-materials">
+      <img class="Pages-hover" src="assets/img/image4.jpg" alt="">
+      <img  src="assets/img/image3.jpg" alt="">
+      <div class="Page-materialsInfo">
+        <h3>madera</h3>
+        <p>ver mas</p>
+        <div class="ulContainer">
+          <ul>
+            <li>Alambrón</li>
+            <li>Aluminio</li>
+            <li>Lámina</li>
+            <li>Tubulares</li>
+          </ul>
+        </div>
+      </div>
+    </figure>
+    <figure class="Pages-materials">
+      <img src="assets/img/image4.jpg" alt="">
+      <img class="Pages-hover" src="assets/img/image3.jpg" alt="">
+      <div class="Page-materialsInfo">
+        <h3>Metal</h3>
+        <p>ver mas</p>
+        <div class="ulContainer">
+          <ul>
+            <li>Alambrón</li>
+            <li>Aluminio</li>
+            <li>Lámina</li>
+            <li>Tubulares</li>
+          </ul>
+        </div>
+      </div>
+    </figure>
+    <figure class="Pages-materials">
+      <img class="Pages-hover" src="assets/img/image4.jpg" alt="">
+      <img  src="assets/img/image3.jpg" alt="">
+      <div class="Page-materialsInfo">
+        <h3>madera</h3>
+        <p>ver mas</p>
+        <div class="ulContainer">
+          <ul>
+            <li>Alambrón</li>
+            <li>Aluminio</li>
+            <li>Lámina</li>
+            <li>Tubulares</li>
+          </ul>
+        </div>
+      </div>
+    </figure>
+        <figure class="Pages-materials">
+      <img class="Pages-hover" src="assets/img/image4.jpg" alt="">
+      <img  src="assets/img/image3.jpg" alt="">
+      <div class="Page-materialsInfo">
+        <h3>madera</h3>
+        <p>ver mas</p>
+        <div class="ulContainer">
+          <ul>
+            <li>Alambrón</li>
+            <li>Aluminio</li>
+            <li>Lámina</li>
+            <li>Tubulares</li>
+          </ul>
+        </div>
+      </div>
+    </figure>
+
   </section>
   <div class="BarUp">
    <a href="#" class="inicio">Inicio</a>
@@ -111,8 +184,37 @@
 <script>
   $(function(){
     $('#slides').superslides({
-        animation: 'fade'
+        animation: 'fade',
+        pagination: false,
       });
+    
+    var tHeader = $('header').outerHeight();
+    var tTab = $('.Tab').outerHeight();
+    var tFooter = $('.Footer').outerHeight();
+    var tbarUp = $('.BarUp').outerHeight();
+    //funcion para detectar el height de .Pages
+    function Pages() {
+      var ventana = $(window).outerHeight();
+      if($(window).width()<768)
+      {
+        var PagesHeight = ventana-tHeader-tTab;
+        $('.Pages-materials').css("height",PagesHeight);
+        $('.Pages .Pages-materials img').css("height",PagesHeight);
+        
+
+      }
+      else
+      {
+        var PagesHeight = ventana-tHeader-tTab-tFooter-tbarUp;
+        $('.Pages').css("height",PagesHeight);
+        $('.Pages .Pages-materials img').css("height",PagesHeight);
+      }
+      //alert("window: "+ventana+" header: "+theader+" tab: "+tTab);
+    }
+    Pages();
+    $( window ).resize(function() {
+      Pages();
+    });
   });
 </script>
 </html>
