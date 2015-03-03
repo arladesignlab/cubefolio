@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Nuestro Alcance | Cube</title>
+	<link rel="stylesheet" href="assets/css/theme.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="container-fluid">
+    <header class="Header row">
+        <div class="Header-container col-xs-6 col-sm-2 noPadd">
+        <figure class="Header-logoContainer">
+          <img class="Header-logo" src="assets/img/Cube.png" alt="">
+        </figure>
+      </div>
+      <div class="col-xs-6 col-sm-10 noPadd">
+        <nav class="MainMenu">
+          <a href="#" class="MainMenu-mobileMenu">MENU</a>
+          <ul class="MainMenu-list">
+              <li class="MainMenu-item">
+                <a href="collection.html">Lo que hacemos</a>
+              </li>
+              <li class="MainMenu-item">
+                <a class="current" href="ourReach.html">nuestro alcance</a>
+              </li>
+              <li class="MainMenu-item">
+                <a href="materials.html">materiales y procesos</a>
+              </li>
+              <li class="MainMenu-item">
+                <a href="clients.html">clientes</a>
+              </li>
+              <li class="MainMenu-item">
+                <a href="about.html">empresa</a>
+              </li>
+              <li class="MainMenu-item Menu-contact">
+                <a href="#">contacto</a>
+              </li>
+          </ul>
+          <a class="MainMenu-contact" href="#">contacto</a>
+          <img src="assets/img/line.png" class="line">
+          <img src="assets/img/shadow.png" class="shadow">
+        </nav>
+      </div>
+    </header>
+  </div>
+    <section class="Reachs container-fluid">
+      <div class="Reachs-container row">
+        <div class="Reachs-info Reachs-reach col-md-3 col-sm-6">
+          <h2>Canales de ejecución</h2>
+          <img class="shadow" src="assets/img/shadow.png" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro excepturi eaque amet, ullam itaque delectus ad odio doloremque harum et temporibus officia quis, voluptatibus esse animi facere ex voluptas velit.</p>
+        </div>
+        <figure class="Reachs-reach col-md-3 col-sm-6">
+          <img src="assets/images/cinelli-front.jpeg" alt="">
+          <div class="yellowBG"></div>
+          <p class="Reachs-name">Autoservicios</p>
+        </figure>
+        <figure class="Reachs-reach col-md-3 col-sm-6">
+          <img src="assets/images/cinelli-front.jpeg" alt="">
+          <div class="greenBG"></div>
+          <p class="Reachs-name">Farmacia</p>
+        </figure>
+        <figure class="Reachs-reach col-md-3 col-sm-6">
+          <img src="assets/images/cinelli-front.jpeg" alt="">
+          <div class="pinkBG"></div>
+          <p class="Reachs-name">Clubes de Precio</p>
+        </figure>
+        <figure class="Reachs-reach col-md-3 col-sm-6">
+          <img src="assets/images/cinelli-front.jpeg" alt="">
+          <div class="blueBG"></div>
+          <p class="Reachs-name">Canal Tradicional</p>
+        </figure>
+        <figure class="Reachs-reach col-md-3 col-sm-6">
+          <img src="assets/images/cinelli-front.jpeg" alt="">
+          <div class="greenBG"></div>
+          <p class="Reachs-name">Tienda Especializada</p>
+        </figure>
+        <figure class="Reachs-reach col-md-3 col-sm-6">
+          <img src="assets/images/cinelli-front.jpeg" alt="">
+          <div class="blueBG"></div>
+          <p class="Reachs-name">Campañas 360°</p>
+        </figure>
+        <figure class="Reachs-reach col-md-3 col-sm-6">
+          <img src="assets/images/cinelli-front.jpeg" alt="">
+          <div class="yellowBG"></div>
+          <p class="Reachs-name">Departamental</p>
+        </figure>
+      </div>
+    </section>
+  <div class="BarUp">
+   <a href="#" class="inicio">Inicio</a>
+   <a href="#" class="inicioUp glyphicon glyphicon-chevron-up"></a>
+ </div>
+  <footer class="Footer">
+    <ul class="Footer-nav">
+      <li><a href="#">Lo que hacemos</a></li>
+      <li><a href="#">Nuestro Alcance</a></li>
+      <li><a href="#">Materiales y Procesos</a></li>
+      <li><a href="#">Clientes</a></li>
+      <li><a href="#">Empresa</a></li>
+    </ul>
+    <p class="Footer-copyright">© 2015 <strong>CUBE</strong> DESAFIANDO IDEAS</p>
+
+  </footer>
+</body>
+<script src="assets/js/jquery-2.1.3.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/cube.js"></script>
+<script>
+  $(function(){
+    function reachSquare(){
+      var reachWidth = $('.Reachs-reach').width();
+      $('.Reachs-reach').css("height",reachWidth)
+    };
+    reachSquare();
+    $(window).resize(function(){
+      reachSquare();
+    });
+  });
+</script>
+</html>
