@@ -134,8 +134,8 @@
       </div>
       <div class="col-md-3 col-sm-4">
         <figure class="Clients-client">
-          <img src="assets/img/britax.jpg" alt="Britax">  
-        </figure>
+          <img src="assets/img/britax.jpg" alt="Clorox">  
+        </figure>        
       </div>
     </div>
   </section>
@@ -157,4 +157,59 @@
 <script src="assets/js/jquery-2.1.3.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/cube.js"></script>
+<script>
+  $(function(){
+    var clients = $('.Clients-client');
+    function withoutBorder(){
+      var resolution = $(window).width();
+      if(resolution>992)
+      {
+        var numberWB = clients.length % 4;
+        if(numberWB==0)
+        {
+          for (var i = clients.length-4; i < clients.length; i++) {
+            $(clients[i]).addClass('withoutBorder');
+          };
+        }
+        else
+        { 
+          var cont=numberWB;
+          for (var i = clients.length-cont; i < clients.length; i++) {
+            $(clients[i]).addClass('withoutBorder');
+          };
+        }
+      }
+      else
+      {
+        if(resolution<992&&resolution>768)
+        {
+          var numberWB = clients.length % 3;
+          if(numberWB==0)
+          {
+            for (var i = clients.length-3; i < clients.length; i++) {
+              $(clients[i]).addClass('withoutBorder');
+            };
+          }
+          else
+          {
+            var cont=numberWB;
+            for (var i = clients.length-cont; i < clients.length; i++) {
+              $(clients[i]).addClass('withoutBorder');
+            };
+          }
+        }
+        else
+        {
+          $(clients[clients.length-1]).addClass('withoutBorder');
+        }
+      }
+    }
+    withoutBorder();
+    $(window).resize(function(){
+      $(clients).removeClass('withoutBorder');
+      withoutBorder();
+    });
+    
+  });
+</script>
 </html>
